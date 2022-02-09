@@ -36,4 +36,12 @@ class UserController extends Controller
             ->pushCriteria(new UserCriTest())
             ->all());
     }
+
+
+    public function show($id)
+    {
+        return Response::json($this->userRepository
+           // ->pushCriteria(new UserCriTest())
+            ->find($id));
+    }
 }
